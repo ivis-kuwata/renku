@@ -7,8 +7,9 @@ metadata:
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
   annotations:
-    "argocd.argoproj.io/hook": Sync
-    "argocd.argoproj.io/hook-delete-policy": BeforeHookCreation
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-1"
+    "helm.sh/hook-delete-policy": "before-hook-creation"
 spec:
   template:
     metadata:
