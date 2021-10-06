@@ -39,7 +39,7 @@ global:
     ## The client secret for the renku client application registered in keycloak.
     clientSecret: # use `uuidgen -r`
     ## The client secret for the renku-cli client application registered in keycloak.
-    cliClientSecret: # use `uuidgen -r`
+    cliClientSecret: '87c80c57-6a18-4d50-8ef9-d5d800cce36d' # use `uuidgen -r`
     ## The client ID for authentication against gitlab
     gitlabClientId: renku-ui
     ## The client secret for authentication against gitlab
@@ -535,11 +535,11 @@ notebooks:
   # imageRegistry:
   oidc:
     clientId: renku-jupyterserver
-    clientSecret: # use `uuidgen -r`
+    clientSecret: 'b073811c-ecb0-4a6c-a857-c4f4ba95af89' # use `uuidgen -r`
     token_url:
     auth_url:
   session_ingress:
-    host: 
+    host:
     tls_secret:
     annotations: |
       {kubernetes.io/ingress.class: nginx,

@@ -90,7 +90,7 @@ notebooks:
   gitlab:
     registry:
       host: 10.100.123.45:8105
-      
+
 runner:
   enabled: true
 
@@ -101,6 +101,8 @@ graph:
         password: 94a635b40afc2cba
       renku:
         password: &sparql-password 2b7cd80c595a6e98484c4b8a5ed5e82e
+    service:
+      port: 4500
 
   ## if running gitlab on minikube, set on cmd line with --set graph.gitlab.url
   # gitlab:

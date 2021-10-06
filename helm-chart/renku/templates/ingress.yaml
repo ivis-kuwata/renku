@@ -32,7 +32,7 @@ metadata:
     heritage: {{ .Release.Service }}
   annotations:
     nginx.ingress.kubernetes.io/configuration-snippet: |
-        more_set_headers "Content-Security-Policy: frame-ancestors 'self' {{ .Values.ui.baseUrl }}";      
+        more_set_headers "Content-Security-Policy: frame-ancestors 'self' {{ .Values.ui.baseUrl }}";
 {{- range $key, $value := .Values.ingress.annotations }}
     {{ $key }}: {{ $value | quote }}
 {{- end }}
@@ -59,7 +59,7 @@ spec:
           service:
             name: {{ $keycloakFullname }}-http
             port:
-              name: {{ $keycloakServicePort }}
+              number: {{ $keycloakServicePort }}
       {{- end }}
       {{- if $gitlabEnabled }}
       - path: /gitlab
