@@ -37,13 +37,13 @@ global:
       overwriteOnHelmUpgrade: false
   gateway:
     ## The client secret for the renku client application registered in keycloak.
-    clientSecret: # use `uuidgen -r`
+    clientSecret: 49d10584-a393-40b9-b917-35765138dec6 # use `uuidgen -r`
     ## The client secret for the renku-cli client application registered in keycloak.
     cliClientSecret: '87c80c57-6a18-4d50-8ef9-d5d800cce36d' # use `uuidgen -r`
     ## The client ID for authentication against gitlab
     gitlabClientId: renku-ui
     ## The client secret for authentication against gitlab
-    gitlabClientSecret:
+    gitlabClientSecret: 1eb84e60ee7d0bcfc08c52b2c538c1bcd6b0f4d776768671f4b625dae1ab9f18
   renku:
     ## Domain name for the deployed instance of renku
     domain: example.local
@@ -60,7 +60,7 @@ global:
       postgresPassword:
         value:
         overwriteOnHelmUpgrade: false
-      existingSecret: '{{ template "renku.fullname" . }}-db-postgres'
+      existingSecret: renku-graph-db-postgres #'{{ template "renku.fullname" . }}-db-postgres'
     tokenRepository:
       ## Name of the postgres user to be used to access the db storing access tokens
       postgresUser: tokenstorage
@@ -68,7 +68,7 @@ global:
       postgresPassword:
         value:
         overwriteOnHelmUpgrade: false
-      existingSecret: '{{ template "renku.fullname" . }}-token-postgres'
+      existingSecret: renku-graph-token-postgres #'{{ template "renku.fullname" . }}-token-postgres'
     jena:
       ## specify which dataset should be used in Jena
       dataset:

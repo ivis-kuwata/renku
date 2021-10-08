@@ -2,6 +2,7 @@
 # Configuration file for deploying the renku chart on minikube
 #
 
+
 ingress:
   enabled: true
   annotations:
@@ -18,7 +19,7 @@ global:
     urlPrefix: /gitlab
   gateway:
     clientSecret: 259a72d8-2c40-435f-9e0f-24df7c1a7dbc
-    gitlabClientSecret: 4e35410e4116d2280e29c6da6aaaa89fc1ab77364c6352aeb5adbd037d49590a
+    gitlabClientSecret: 1eb84e60ee7d0bcfc08c52b2c538c1bcd6b0f4d776768671f4b625dae1ab9f18
   renku:
     version: 'latest'
 
