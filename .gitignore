@@ -81,7 +81,7 @@ flycheck_*.el
 
 ### Helm ###
 # Chart dependencies
-**/charts/*.tgz
+# **/charts/*.tgz
 
 ### Linux ###
 
